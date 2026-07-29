@@ -11,10 +11,10 @@
 
 -- YOU CAN USE UI to setup the context OR run SQL SCRIPT BELOW : 
 
--- USE ROLE ACCOUNTADMIN; -- Or the same role you used to load the data. 
--- USE WAREHOUSE COMPUTE_WH; -- Or any other Virtual WAREHOUSE you can use. 
--- USE DATABASE COURSERA;
--- USE SCHEMA PUBLIC;
+USE ROLE ACCOUNTADMIN; -- Or the same role you used to load the data. 
+USE WAREHOUSE COMPUTE_WH; -- Or any other Virtual WAREHOUSE you can use. 
+USE DATABASE COURSERA;
+USE SCHEMA PUBLIC;
 
 
 
@@ -25,7 +25,8 @@
     ** Note : the function CONCAT() is used to facilitiate extra Spaces detection 	
 */
 
--- <Your SQL Script Here> 
+SELECT NAME, CONCAT('>',NAME,'<')
+FROM CUSTOMERS;
 
 
 
@@ -36,4 +37,5 @@
 	
 */
 
--- <Your SQL Script Here> 
+SELECT NAME,TRIM(NAME) as N,CONCAT('>',NAME,'<') 
+FROM CUSTOMERS;
