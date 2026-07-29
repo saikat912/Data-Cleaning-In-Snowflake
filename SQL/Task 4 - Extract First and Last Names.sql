@@ -11,10 +11,10 @@
 
 -- YOU CAN USE UI to setup the context OR run SQL SCRIPT BELOW : 
 
--- USE ROLE ACCOUNTADMIN; -- Or the same role you used to load the data. 
--- USE WAREHOUSE COMPUTE_WH; -- Or any other Virtual WAREHOUSE you can use. 
--- USE DATABASE COURSERA;
--- USE SCHEMA PUBLIC;
+USE ROLE ACCOUNTADMIN; -- Or the same role you used to load the data. 
+USE WAREHOUSE COMPUTE_WH; -- Or any other Virtual WAREHOUSE you can use. 
+USE DATABASE COURSERA;
+USE SCHEMA PUBLIC;
 
 
 
@@ -25,5 +25,6 @@
     ** Notes : <partNumber> : If the value is negative, the parts are counted backward from the end of the string.
 */
 
--- <Your SQL Script Here> 
+SELECT NAME,split_part(TRIM(NAME,' 0'),',',1) AS first_name,split_part(trim(NAME,' 0'),',',2) as Last_name
+FROM CUSTOMERS;
 
