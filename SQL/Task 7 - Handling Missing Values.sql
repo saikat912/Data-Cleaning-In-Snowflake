@@ -24,8 +24,10 @@
 	SYNTAX : <expr> IS [ NOT ] NULL;
     ** Notes : Use Logical operators AND, NOT OR
 */
-
--- <Your SQL Script Here> 
+SELECT *
+FROM CUSTOMERS
+WHERE EMAIL IS NULL
+   OR EMAIL = '';
 
 
 -- Step 7.3 Handle Missing Data with Imputation  ---
@@ -35,3 +37,4 @@
 */
 
 -- <Your SQL Script Here>
+SELECT COMPANY IFF(COMPANY IS NULL OR COMPANY -'','NA',COMPANY) as clean_company FROM CUSTOMERS;
