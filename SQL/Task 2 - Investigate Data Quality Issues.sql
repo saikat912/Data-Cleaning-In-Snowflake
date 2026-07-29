@@ -33,7 +33,7 @@
 */
 
 
--- <Your SQL Script Here>  
+SELECT * FROM CUSTOMERS;  
 
 	
 --- Step 2.3 Use the Contextual Statistcis Panel  ---
@@ -45,3 +45,4 @@
 -- 1- Check Data Types 
 
 -- 2- Use the Result Panel from UI
+69ms
